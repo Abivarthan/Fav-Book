@@ -1,0 +1,142 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", serif;
+}
+
+.Head {
+    background-color: blueviolet;
+    width: 100%;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Container with Grid Layout */
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Book Detail Cards */
+#book-detail {
+    border-radius: 15px;
+    background-color: black;
+    padding: 20px;
+    color: white;
+}
+
+#book-detail h2 {
+    color: blueviolet;
+}
+
+#delbtn {
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Floating Add Button */
+.addbtn {
+    font-size: 60px;
+    padding: 20px 30px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+}
+
+/* Popup and Overlay */
+.overlay {
+    background-color: black;
+    opacity: 0.8;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.popup {
+    background-color: blueviolet;
+    width: 30%;
+    position: fixed;
+    top: 20%;
+    left: 35%;
+    padding: 20px;
+    z-index: 2;
+    border-radius: 10px;
+    display: none;
+}
+
+.popup input, .popup textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    color: black;
+}
+/* changing placeholder color */
+.popup input::placeholder, .popup textarea::placeholder {
+    color: black;
+}
+
+.popup button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    .popup {
+        width: 80%;
+        left: 10%;
+    }
+
+    .addbtn {
+        bottom: 20px;
+        right: 20px;
+        font-size: 50px;
+        padding: 15px 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .popup {
+        width: 90%;
+        left: 5%;
+    }
+
+    #book-detail {
+        padding: 15px;
+    }
+
+    .addbtn {
+        font-size: 40px;
+        padding: 10px 20px;
+    }
+}
